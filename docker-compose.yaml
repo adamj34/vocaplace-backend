@@ -1,0 +1,57 @@
+version: '3.9'
+
+services:
+  server:
+    build: ./server
+    command: npm run dev
+    ports:
+      - '8000:8000'
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=vocaplace
+      - DB_PORT=5432
+      - DB_SERVICE_NAME=db
+      - NODE_ENV=development
+      - PORT=8000
+    develop:
+      watch:
+        - action: sync
+          path: ./server
+          target: /opt/app
+          ignore:
+            - node_modules
+        - action: rebuild
+          path: ./server/package.json
+    depends_on:
+      - db
+      - keycloak
+
+  db:
+    image: postgres:16-alpine3.18
+    volumes:
+      - postgres:/var/lib/postgresql/data/
+      - ./server/src/db/sql/setup/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=vocaplace
+    tmpfs: /var/lib/postgresql/data # temporary, data wont save
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:18.0.2
+    container_name: keycloak
+    ports:
+      - 8080:8080
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    volumes:
+      - ./keycloak/data:/opt/keycloak/data/h2
+      - ./keycloak/themes:/opt/keycloak/themes/
+    command: start-dev
+
+volumes:
+  postgres:

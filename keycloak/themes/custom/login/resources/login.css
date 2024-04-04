@@ -1,0 +1,180 @@
+.login-pf {
+  background: none;
+  height: unset;
+}
+.login-pf body {
+  background-image: url("Background.jpg");
+  background-attachment: fixed;
+  text-transform: unset;
+  color: white;
+  font-family: "Gill Sans MT";
+  letter-spacing: 1px;
+  text-align: center;
+}
+.login-pf body .login-pf-page {
+  padding: 10% 10%;
+}
+.login-pf body .login-pf-page #kc-header {
+  display: none;
+}
+.login-pf body .card-pf {
+  border-radius: 20px;
+  padding: 20px 40px;
+  background-image: linear-gradient(to bottom right, #303641, #1f2229);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.login-pf body .card-pf .login-pf-header {
+  margin: 0;
+  border-bottom: 3px solid #923b2f;
+  text-transform: uppercase;
+}
+.login-pf body .card-pf .login-pf-header h1 {
+  font-size: 18px;
+  margin: 20px;
+}
+.login-pf body .card-pf #kc-content {
+  padding: 20px 100px;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper div:nth-child(3) {
+  flex-basis: 100%;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper > div {
+  margin: 0;
+  padding: 20px;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper > div p, .login-pf body .card-pf #kc-content #kc-content-wrapper > div label, .login-pf body .card-pf #kc-content #kc-content-wrapper > div button, .login-pf body .card-pf #kc-content #kc-content-wrapper > div input, .login-pf body .card-pf #kc-content #kc-content-wrapper > div h4, .login-pf body .card-pf #kc-content #kc-content-wrapper > div span {
+  font-size: 16px;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper > div input {
+  border-color: #1d2026;
+}
+.login-pf body .card-pf #kc-content #kc-content-wrapper > div .pf-c-button {
+  --pf-c-button--after--BorderColor: none;
+  --pf-c-button--after--BorderRadius: none;
+  border-radius: 5px;
+  border-color: blue;
+}
+
+input#kc-login, input#kc-register, #kc-info a, #kc-form-buttons > input, #social-github, #social-google {
+  padding: 12px;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border-color: #303641;
+  background-color: #923b2f;
+  background-image: linear-gradient(#923b2f, #7b2e24);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  color: white;
+  transition: 0.4s;
+  letter-spacing: 1px;
+  text-decoration: none;
+  outline: none;
+}
+input#kc-login:hover, input#kc-register:hover, #kc-info a:hover, #kc-form-buttons > input:hover, #social-github:hover, #social-google:hover {
+  background-color: white;
+  background-image: none;
+  color: #923b2f;
+}
+
+hr {
+  display: none;
+}
+
+input#username, input#password, input#firstName, input#lastName, input#email, input#password-confirm {
+  background-color: #303641;
+  font-family: inherit;
+  color: white;
+  padding: 6px 10px;
+  font-size: 110%;
+  border-radius: 5px;
+  border: 2px solid #12151a;
+  outline: none;
+  transition: 0.3s;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+  cursor: text;
+}
+input#username:focus, input#password:focus, input#firstName:focus, input#lastName:focus, input#email:focus, input#password-confirm:focus {
+  border: 2px solid #923b2f;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.4s;
+}
+a:hover {
+  color: #923b2f;
+}
+
+#kc-social-providers {
+  padding: 20px;
+}
+#kc-social-providers ul {
+  font-size: 150%;
+  padding-inline: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+#kc-info {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+#kc-info a {
+  margin-left: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #12151a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1d2026;
+  border-radius: 5px;
+}
+
+#kc-register-form > div:last-child {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  padding: 10px;
+}
+
+[id^=input-error] {
+  font-size: 70%;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+.checkbox > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.checkbox > label #rememberMe {
+  border: none;
+  height: 16px;
+  width: 16px;
+  accent-color: #923b2f;
+  transition: 0.4s;
+  box-shadow: none;
+}
+.checkbox > label #rememberMe:checked {
+  background-color: red;
+  color: green;
+}/*# sourceMappingURL=login.css.map */
