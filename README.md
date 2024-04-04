@@ -1,4 +1,4 @@
-RestAPI written as a part of my bachelor's thesis serving data to an SPA.
+RestAPI written as a part of my bachelor's thesis serving data to a SPA.
 
 Technologies:
 * Node.js (Express.js)
